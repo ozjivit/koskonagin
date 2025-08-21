@@ -69,7 +69,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="meta-label">Phone / WhatsApp</div>
-                <div className="meta-value"><a href="https://wa.me/97450279565" target="_blank" rel="noopener noreferrer">+974 5027 9565</a></div>
+                <div className="meta-value"><a href="https://wa.me/97430800691" target="_blank" rel="noopener noreferrer">+974 3080 0691</a></div>
               </div>
             </div>
           </div>

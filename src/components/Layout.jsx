@@ -217,7 +217,7 @@ export default function Layout() {
               </a>
               <a
                 className="social-link whatsapp"
-                href="https://wa.me/97450279565"
+                href="https://wa.me/97430800691"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="WhatsApp"
@@ -247,7 +247,7 @@ export default function Layout() {
       )}
 
       <a
-        href="https://wa.me/97450279565"
+        href="https://wa.me/97430800691"
         className="whatsapp-fab"
         target="_blank"
         rel="noopener noreferrer"
