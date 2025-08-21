@@ -1,0 +1,11 @@
+.auth-card { background: var(--card); border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 20px; max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.auth-title { font-family: 'Playfair Display', Georgia, serif; font-size: 28px; margin: 0 0 4px 0; }
+.auth-form { display: flex; flex-direction: column; gap: 12px; }
+.auth-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.auth-field { display: flex; flex-direction: column; gap: 6px; }
+.auth-field label { font-weight: 600; color: #2a2a2a; }
+.auth-field input { border: 1px solid #eee; border-radius: 10px; padding: 10px 12px; background: #fff; font-size: 14px; color: #333; }
+.auth-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.auth-switch { color: var(--muted); font-size: 14px; }
+@media (max-width: 640px) { .auth-row { grid-template-columns: 1fr; } }
+ 
