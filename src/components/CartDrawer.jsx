@@ -1,14 +1,21 @@
 import { useUi } from '../state/UiContext.jsx'
 import { useCart } from '../state/CartContext.jsx'
+import { useNavigate } from 'react-router-dom'
 import '../App.css'
 
 export default function CartDrawer() {
   const { cartOpen, closeCart } = useUi()
   const { items, totalPrice, setQty, removeItem } = useCart()
+  const navigate = useNavigate()
 
   const FREE_SHIPPING_THRESHOLD = 200
   const progress = Math.min(100, Math.max(0, (Number(totalPrice || 0) / FREE_SHIPPING_THRESHOLD) * 100))
   const remaining = Math.max(0, FREE_SHIPPING_THRESHOLD - Number(totalPrice || 0))
+
+  const handleCheckout = () => {
+    closeCart()
+    navigate('/checkout')
+  }
 
   return (
     <div className={`cart-drawer-root ${cartOpen ? 'open' : ''}`} aria-hidden={!cartOpen}>
@@ -71,7 +78,7 @@ export default function CartDrawer() {
             <div style={{ fontWeight: 700 }}>Total</div>
             <div style={{ fontWeight: 700 }}>QAR {Number(totalPrice || 0).toFixed(2)}</div>
           </div>
-          <a href="/checkout" className="btn primary" style={{ width: '100%', justifyContent: 'center' }}>Checkout</a>
+          <button onClick={handleCheckout} className="btn primary" style={{ width: '100%', justifyContent: 'center' }}>Checkout</button>
         </div>
       </aside>
     </div>
