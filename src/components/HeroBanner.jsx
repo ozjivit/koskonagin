@@ -6,7 +6,7 @@ export default function HeroBanner() {
   const slides = useMemo(() => ([
     { 
       id: 1, 
-      image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop', 
+      image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1600&auto=format&fit=crop', 
       title: 'NEW\nLOOK\nNEW\nROUTINE', 
       tagline: 'A New Era of Beauty Begins',
       cta: 'Shop Now',
@@ -14,7 +14,7 @@ export default function HeroBanner() {
     },
     { 
       id: 2, 
-      image: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=1600&auto=format&fit=crop', 
+      image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1600&auto=format&fit=crop', 
       title: 'SKIN\nCARE\nESSENTIALS', 
       tagline: 'Radiance that starts today',
       cta: 'Shop Skincare',
@@ -22,7 +22,7 @@ export default function HeroBanner() {
     },
     { 
       id: 3, 
-      image: localSlide3, 
+      image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop', 
       title: 'MAKEUP\nYOU\nLOVE', 
       tagline: 'Express your best self',
       cta: 'Shop Makeup',
