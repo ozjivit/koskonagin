@@ -24,6 +24,7 @@ export default function Shop() {
   const [min, setMin] = useState('')
   const [max, setMax] = useState('')
   const [sort, setSort] = useState('')
+  const [showFilters, setShowFilters] = useState(false)
   const { addItem } = useCart()
   const { user } = useAuth()
   const toast = useToast()
@@ -64,11 +65,28 @@ export default function Shop() {
     return 0
   })
 
+  const toggleFilters = () => {
+    setShowFilters(!showFilters)
+  }
+
   return (
     <main className="page">
       <section className="section">
-        <h2 className="section-title">Shop</h2>
-        <div className="search-controls">
+        <div className="shop-header">
+          <h2 className="section-title">Shop</h2>
+          <button 
+            className="search-toggle-btn" 
+            onClick={toggleFilters}
+            aria-label={showFilters ? "Hide filters" : "Show filters"}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div className={`search-controls ${showFilters ? 'show' : ''}`}>
           <input className="filter-input" placeholder="Search products" value={q} onChange={(e) => setQ(e.target.value)} />
           <input className="filter-input" placeholder="Min QAR" value={min} onChange={(e) => setMin(e.target.value)} />
           <input className="filter-input" placeholder="Max QAR" value={max} onChange={(e) => setMax(e.target.value)} />
@@ -80,6 +98,7 @@ export default function Shop() {
             <option value="name_desc">Name: Z-A</option>
           </select>
         </div>
+        
         {loading && <div>Loading products…</div>}
         {error && <div className="hint">{error}</div>}
         <div className="products-grid">
