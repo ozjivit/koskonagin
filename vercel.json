@@ -3,6 +3,32 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/checkout", "destination": "/index.html", "permanent": false },
+    { "source": "/shop", "destination": "/index.html", "permanent": false },
+    { "source": "/cart", "destination": "/index.html", "permanent": false },
+    { "source": "/product/:id", "destination": "/index.html", "permanent": false },
+    { "source": "/login", "destination": "/index.html", "permanent": false },
+    { "source": "/signup", "destination": "/index.html", "permanent": false },
+    { "source": "/contact", "destination": "/index.html", "permanent": false },
+    { "source": "/rewards", "destination": "/index.html", "permanent": false },
+    { "source": "/orders", "destination": "/index.html", "permanent": false },
+    { "source": "/wishlist", "destination": "/index.html", "permanent": false },
+    { "source": "/search", "destination": "/index.html", "permanent": false },
+    { "source": "/admin", "destination": "/index.html", "permanent": false },
+    { "source": "/admin/orders", "destination": "/index.html", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
   ]
 }
 
