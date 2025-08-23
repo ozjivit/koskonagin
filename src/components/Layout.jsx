@@ -5,6 +5,7 @@ import { useCart } from '../state/CartContext.jsx'
 import '../App.css'
 import CartDrawer from './CartDrawer.jsx'
 import { useUi } from '../state/UiContext.jsx'
+import logoImage from '../assets/logo.png'
 
 export default function Layout() {
   const [open, setOpen] = useState(false)
@@ -107,7 +108,7 @@ export default function Layout() {
       <header className="navbar">
         <div className="brand">
           <NavLink to="/" className="logo">
-            <img src="/src/assets/logo.png" alt="Toronto Beauty TB" className="logo-image" />
+            <img src={logoImage} alt="Toronto Beauty TB" className="logo-image" />
           </NavLink>
         </div>
         <nav className={`nav-links ${open ? 'open' : ''}`} onClick={() => { setOpen(false); setProfileOpen(false) }}>
@@ -177,7 +178,7 @@ export default function Layout() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-brand">
-            <img src="/src/assets/logo.png" alt="Toronto Beauty TB" className="footer-logo" />
+            <img src={logoImage} alt="Toronto Beauty TB" className="footer-logo" />
           </div>
           <div className="footer-social" aria-label="Social links">
             <div className="social-links">
@@ -258,7 +259,7 @@ export default function Layout() {
         aria-label="Chat on WhatsApp"
         title="Chat on WhatsApp"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M20.5 3.5A10 10 0 0 0 4.5 17.6L3 21l3.5-1.4A10 10 0 1 0 20.5 3.5Zm-8.4 14c-1.6 0-3.1-.5-4.3-1.4l-.3-.2-1.7.6.6-1.7-.2-.3a7 7 0 1 1 6 3Zm3.3-3.6c-.2-.1-1.3-.6-1.5-.7-.2-.1-.3-.1-.5.1s-.6.7-.7.8c-.1.1-.3.2-.5.1-1-.5-1.8-1.1-2.5-2-.2-.3.2-.3.4-1 .1-.1 0-.3 0-.4l-.6-1c-.1-.2-.3-.3-.5-.3h-.4c-.2 0-.4.2-.5.4-.2.5-.5 1.2-.5 2 0 .8.5 1.6 1.1 2.1 1 .9 2.2 1.5 3.5 1.8.4.1.8.1 1.1.1.3 0 .7-.2.9-.5.3-.4.5-.8.6-1.3 0-.3 0-.5-.2-.6Z"/>
         </svg>
       </a>
