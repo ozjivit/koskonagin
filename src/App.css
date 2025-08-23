@@ -1265,6 +1265,21 @@ html, body {
   padding: 16px 0; background: var(--bg);
 }
 .brand .logo { font-family: 'Playfair Display', Georgia, serif; font-weight: 800; font-size: 28px; letter-spacing: 0.5px; line-height: 1; display: block; }
+
+/* Logo Image Styles */
+.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 .nav-toggle { display: none; border: 0; background: transparent; width: 34px; height: 30px; padding: 0; border-radius: 10px; transition: background .2s ease; }
 .nav-toggle:hover { background: rgba(0,0,0,0.04); }
 .nav-toggle span { display: block; height: 2px; background: #2f2f2f; margin: 5px auto; border-radius: 2px; width: 18px; transition: transform .25s ease, opacity .2s ease, width .25s ease; }
@@ -1385,6 +1400,15 @@ html, body {
 @media (max-width: 768px) {
   .navbar { padding: 12px 0; }
   .brand .logo { font-size: 22px; white-space: nowrap; }
+  
+  /* Mobile Logo Styles */
+  .logo-image {
+    height: 32px;
+  }
+  
+  .footer-logo {
+    height: 28px;
+  }
   .nav-icons { gap: 14px; transform: translateX(24px); }
   .icon-btn { width: 32px; height: 32px; min-width: 32px; min-height: 32px; }
   .profile-btn { width: 32px; height: 32px; }

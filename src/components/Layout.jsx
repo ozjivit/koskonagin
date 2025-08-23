@@ -106,7 +106,9 @@ export default function Layout() {
       </div>
       <header className="navbar">
         <div className="brand">
-          <NavLink to="/" className="logo">TB Beauty</NavLink>
+          <NavLink to="/" className="logo">
+            <img src="/src/assets/logo.png" alt="Toronto Beauty TB" className="logo-image" />
+          </NavLink>
         </div>
         <nav className={`nav-links ${open ? 'open' : ''}`} onClick={() => { setOpen(false); setProfileOpen(false) }}>
           <NavLink to="/" end>Home</NavLink>
@@ -174,7 +176,9 @@ export default function Layout() {
 
       <footer className="site-footer">
         <div className="footer-inner">
-          <div className="footer-brand">TB Beauty</div>
+          <div className="footer-brand">
+            <img src="/src/assets/logo.png" alt="Toronto Beauty TB" className="footer-logo" />
+          </div>
           <div className="footer-social" aria-label="Social links">
             <div className="social-links">
               <a
