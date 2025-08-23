@@ -101,7 +101,7 @@ export default function Layout() {
           <span className="badge-dot" aria-hidden="true" />
           <span>Cash on Delivery available</span>
           <span className="badge-dot" aria-hidden="true" />
-          <span>Support: +974 5027 9565</span>
+          <span>Support: +974 3080 0691</span>
         </div>
       </div>
       <header className="navbar">
