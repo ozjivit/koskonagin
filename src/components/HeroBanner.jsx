@@ -10,9 +10,7 @@ export default function HeroBanner() {
       title: 'NEW\nLOOK\nNEW\nROUTINE', 
       tagline: 'A New Era of Beauty Begins',
       cta: 'Shop Now',
-      ctaLink: '/shop',
-      secondaryCta: 'Learn More',
-      secondaryCtaLink: '/about'
+      ctaLink: '/shop'
     },
     { 
       id: 2, 
@@ -20,9 +18,7 @@ export default function HeroBanner() {
       title: 'SKIN\nCARE\nESSENTIALS', 
       tagline: 'Radiance that starts today',
       cta: 'Shop Skincare',
-      ctaLink: '/shop?category=skincare',
-      secondaryCta: 'Get Consultation',
-      secondaryCtaLink: '/consultation'
+      ctaLink: '/shop?category=skincare'
     },
     { 
       id: 3, 
@@ -30,9 +26,7 @@ export default function HeroBanner() {
       title: 'MAKEUP\nYOU\nLOVE', 
       tagline: 'Express your best self',
       cta: 'Shop Makeup',
-      ctaLink: '/shop?category=makeup',
-      secondaryCta: 'View Tutorials',
-      secondaryCtaLink: '/tutorials'
+      ctaLink: '/shop?category=makeup'
     },
   ]), [])
 
@@ -111,9 +105,6 @@ export default function HeroBanner() {
             <div className="hero-actions">
               <Link to={s.ctaLink} className="btn primary hero-cta">
                 {s.cta}
-              </Link>
-              <Link to={s.secondaryCtaLink} className="btn ghost hero-secondary-cta">
-                {s.secondaryCta}
               </Link>
             </div>
           </div>
