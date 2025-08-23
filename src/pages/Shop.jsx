@@ -30,6 +30,9 @@ export default function Shop() {
   const toast = useToast()
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+    
     let mounted = true
     ;(async () => {
       try {

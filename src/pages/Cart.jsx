@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useCart } from '../state/CartContext.jsx'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
@@ -5,6 +6,11 @@ import '../App.css'
 export default function Cart() {
   const { items, totalPrice, setQty, removeItem, clear } = useCart()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <main className="page">

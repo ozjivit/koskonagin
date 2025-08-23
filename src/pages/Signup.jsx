@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../state/AuthContext.jsx'
 import '../components/Auth.css'
 
@@ -9,6 +10,11 @@ export default function Signup() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+  }, [])
 
   async function onSubmit(e) {
     e.preventDefault()
@@ -32,7 +38,7 @@ export default function Signup() {
             <div className="auth-field">
               <label htmlFor="email">Email</label>
               <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" required />
-            </div>
+          </div>
           </div>
           <div className="auth-field">
             <label htmlFor="password">Password</label>
@@ -40,7 +46,7 @@ export default function Signup() {
           </div>
           {error && <div className="hint error">{error}</div>}
           <div className="auth-actions">
-            <div className="auth-switch">Already have an account? <a href="/login">Log in</a></div>
+            <div className="auth-switch">Already have an account? <Link to="/login">Log in</Link></div>
             <button className="btn primary" type="submit" disabled={loading}>{loading ? 'Creating…' : 'Create account'}</button>
           </div>
         </form>

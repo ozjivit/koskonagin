@@ -22,6 +22,11 @@ export default function Checkout() {
   const [redeemPoints, setRedeemPoints] = useState(0)
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     let mounted = true
     if (!user) return
     setReward((r) => ({ ...r, loading: true }))

@@ -49,6 +49,9 @@ export default function ProductDetails() {
   const [reviewRating, setReviewRating] = useState(5)
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0)
+    
     let mounted = true
     setLoading(true)
     ;(async () => {
