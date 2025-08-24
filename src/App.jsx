@@ -83,7 +83,7 @@ function Categories() {
     <section className="section">
       <div className="section-header">
         <h2 className="section-title">Shop by Category</h2>
-        <p className="section-subtitle">Discover your perfect beauty routine</p>
+        <p className="section-subtitle"></p>
       </div>
       <div className="categories-grid">
         {categories.map((c) => (
